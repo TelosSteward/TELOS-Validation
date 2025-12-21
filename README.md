@@ -1,6 +1,9 @@
 # TELOS Validation Dataset
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17702890.svg)](https://doi.org/10.5281/zenodo.17702890)
+[![Attacks](https://img.shields.io/badge/attacks-1%2C300-blue)](https://github.com/TelosSteward/TELOS-Validation)
+[![ASR](https://img.shields.io/badge/attack%20success%20rate-0%25-brightgreen)](https://github.com/TelosSteward/TELOS-Validation)
+[![License](https://img.shields.io/badge/license-CC%20BY%204.0-orange)](https://creativecommons.org/licenses/by/4.0/)
 
 Official validation data for TELOS AI governance framework.
 
@@ -41,6 +44,12 @@ Official validation data for TELOS AI governance framework.
 
 Complete dataset with documentation available on Zenodo:
 **DOI**: [10.5281/zenodo.17702890](https://doi.org/10.5281/zenodo.17702890)
+
+---
+
+## Related Repositories
+
+- **[TELOS](https://github.com/TelosSteward/TELOS)** - Main TELOS framework with reproduction scripts and documentation
 
 ---
 
