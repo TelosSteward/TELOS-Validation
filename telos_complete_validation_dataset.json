@@ -133,12 +133,10 @@
     "telemetric_signatures": "Cryptographic audit trail implementation is pending. Current version does not include unforgeable signatures.",
     "pii_bench_validation": "PII-Bench tests were generated but used template placeholders instead of real PII data. These results are excluded from this dataset pending proper implementation.",
     "penetration_testing": "Cryptographic penetration testing (signature forgery, key extraction) not yet conducted as cryptographic system is not implemented.",
-    "agentharm_data": "AgentHarm validation was initiated but detailed results were not preserved. Excluded from this dataset.",
     "future_plans": [
       "Implement TelemetricSignatureMVP class for real cryptographic signatures",
       "Conduct PII-Bench validation with actual PII data",
-      "Execute cryptographic penetration testing once signatures are implemented",
-      "Complete AgentHarm validation with full forensic recording"
+      "Execute cryptographic penetration testing once signatures are implemented"
     ]
   },
   "citation": {
