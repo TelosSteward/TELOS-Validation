@@ -63,7 +63,7 @@ Official validation data for TELOS AI governance framework.
 
 ## Related Repositories
 
-- **[TELOS Observatory](https://github.com/TelosSteward/Observatory)** - Main TELOS framework with reproduction scripts and documentation
+- **[TELOS](https://github.com/TelosSteward/TELOS)** - Main TELOS framework with reproduction scripts and documentation
 
 ---
 
