@@ -1,11 +1,12 @@
 # TELOS Validation Dataset
 
+[![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18367069.svg)](https://doi.org/10.5281/zenodo.18367069)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18013104.svg)](https://doi.org/10.5281/zenodo.18013104)
 [![Governance DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18009153.svg)](https://doi.org/10.5281/zenodo.18009153)
 [![SB 243 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18027446.svg)](https://doi.org/10.5281/zenodo.18027446)
 [![Attacks](https://img.shields.io/badge/attacks-1%2C300-blue)](https://github.com/TelosSteward/TELOS-Validation)
 [![ASR](https://img.shields.io/badge/attack%20success%20rate-0%25-brightgreen)](https://github.com/TelosSteward/TELOS-Validation)
-[![License](https://img.shields.io/badge/license-CC%20BY%204.0-orange)](https://creativecommons.org/licenses/by/4.0/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
 
 Official validation data for TELOS AI governance framework.
 
@@ -51,10 +52,11 @@ Official validation data for TELOS AI governance framework.
 
 ---
 
-## Zenodo Datasets
+## Zenodo Publications
 
-| Dataset | DOI | Description |
-|---------|-----|-------------|
+| Publication | DOI | Description |
+|-------------|-----|-------------|
+| **TELOS Paper** | [10.5281/zenodo.18367069](https://doi.org/10.5281/zenodo.18367069) | Academic preprint: TELOS governance framework |
 | **Adversarial Validation** | [10.5281/zenodo.18013104](https://doi.org/10.5281/zenodo.18013104) | 1,300 adversarial attacks, 0% ASR |
 | **Governance Benchmark** | [10.5281/zenodo.18009153](https://doi.org/10.5281/zenodo.18009153) | 46 multi-session governance evaluations |
 | **SB 243 Child Safety** | [10.5281/zenodo.18027446](https://doi.org/10.5281/zenodo.18027446) | CA SB 243 child safety validation (0% ASR, 74% FPR) |
@@ -118,9 +120,9 @@ For the SB 243 child safety validation:
 
 ## License
 
-**Creative Commons Attribution 4.0 International (CC BY 4.0)**
+**Apache License 2.0**
 
 ---
 
-**Last Updated**: December 22, 2025
-**Dataset Version**: 1.1
+**Last Updated**: January 25, 2026
+**Dataset Version**: 1.2
