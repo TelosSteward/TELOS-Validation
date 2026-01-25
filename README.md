@@ -5,7 +5,7 @@
 [![Governance DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18009153.svg)](https://doi.org/10.5281/zenodo.18009153)
 [![SB 243 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18027446.svg)](https://doi.org/10.5281/zenodo.18027446)
 [![XSTest DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18368390.svg)](https://doi.org/10.5281/zenodo.18368390)
-[![Attacks](https://img.shields.io/badge/attacks-1%2C300-blue)](https://github.com/TelosSteward/TELOS-Validation)
+[![Attacks](https://img.shields.io/badge/attacks-2%2C550-blue)](https://github.com/TelosSteward/TELOS-Validation)
 [![ASR](https://img.shields.io/badge/attack%20success%20rate-0%25-brightgreen)](https://github.com/TelosSteward/TELOS-Validation)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
 
@@ -15,23 +15,32 @@ Official validation data for TELOS AI governance framework.
 
 ## Results Summary
 
-- **Total Attacks**: 1,300
+- **Total Attacks**: 2,550
 - **Attack Success Rate**: 0.00%
-- **Statistical Confidence**: 99.9% CI [0%, 0.28%]
-- **Autonomous Blocking**: 95.8% (Tier 1)
+- **Statistical Confidence**: 99.9% CI [0%, 0.18%]
+- **Autonomous Blocking**: 100% (Tier 1 + Tier 2)
 
 ---
 
 ## Benchmarks
 
+### AILuminate (MLCommons) - NEW
+- **Prompts**: 1,200
+- **Blocked**: 1,200 (100%)
+- **Tier 1 (PA)**: 100%
+- **Categories**: 15 hazard types (CSE, violence, hate, CBRNE, privacy, etc.)
+- **Source**: [mlcommons/ailuminate](https://github.com/mlcommons/ailuminate)
+
 ### MedSafetyBench (NeurIPS 2024)
 - **Attacks**: 900
 - **Blocked**: 900 (100%)
+- **Tier Distribution**: 23% Tier 1, 77% Tier 2
 - **Source**: [AI4LIFE-GROUP/med-safety-bench](https://github.com/AI4LIFE-GROUP/med-safety-bench)
 
 ### HarmBench (Center for AI Safety)
 - **Attacks**: 400
 - **Blocked**: 400 (100%)
+- **Tier Distribution**: 95.8% Tier 1, 3.0% Tier 2, 1.2% Tier 3
 - **Source**: [centerforaisafety/HarmBench](https://github.com/centerforaisafety/HarmBench)
 
 ### SB 243 Child Safety (California Regulation)
@@ -51,8 +60,21 @@ Official validation data for TELOS AI governance framework.
 
 ---
 
+## Tier Distribution by Benchmark
+
+| Benchmark | Tier 1 (PA) | Tier 2 (RAG) | Tier 3 (Expert) |
+|-----------|-------------|--------------|-----------------|
+| AILuminate | 100.0% | 0.0% | 0.0% |
+| HarmBench | 95.8% | 3.0% | 1.2% |
+| MedSafetyBench | 23.0% | 77.0% | 0.0% |
+| SB 243 | 58.0% | 14.0% | 28.0% |
+
+---
+
 ## Files
 
+- **`ailuminate_validation_results.json`** - AILuminate results (1,200 prompts) - NEW
+- **`ailuminate_validation_summary.json`** - AILuminate summary statistics - NEW
 - **`telos_complete_validation_dataset.json`** - Complete validation summary with statistical analysis
 - **`medsafetybench_validation_results.json`** - Detailed MedSafetyBench results (900 attacks)
 - **`harmbench_validation_results_summary.json`** - HarmBench aggregate results (400 attacks)
@@ -70,6 +92,7 @@ Official validation data for TELOS AI governance framework.
 | **Governance Benchmark** | [10.5281/zenodo.18009153](https://doi.org/10.5281/zenodo.18009153) | 46 multi-session governance evaluations |
 | **SB 243 Child Safety** | [10.5281/zenodo.18027446](https://doi.org/10.5281/zenodo.18027446) | CA SB 243 child safety validation (0% ASR, 74% FPR) |
 | **XSTest Calibration** | [10.5281/zenodo.18368390](https://doi.org/10.5281/zenodo.18368390) | Over-refusal calibration (24.8% → 8.0% with domain PA) |
+| **AILuminate** | *Pending* | MLCommons AILuminate validation (1,200 prompts, 0% ASR) |
 
 ---
 
@@ -141,6 +164,20 @@ For the XSTest over-refusal calibration:
 }
 ```
 
+For the AILuminate validation (pending Zenodo upload):
+
+```bibtex
+@dataset{brunner_2026_telos_ailuminate,
+  author       = {Brunner, Jeffrey},
+  title        = {{TELOS AILuminate Validation Dataset}},
+  month        = jan,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  note         = {DOI pending}
+}
+```
+
 ---
 
 ## License
@@ -150,4 +187,4 @@ For the XSTest over-refusal calibration:
 ---
 
 **Last Updated**: January 25, 2026
-**Dataset Version**: 1.2
+**Dataset Version**: 1.3
