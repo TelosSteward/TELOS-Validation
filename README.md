@@ -1,10 +1,11 @@
 # TELOS Validation Dataset
 
 [![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18367069.svg)](https://doi.org/10.5281/zenodo.18367069)
+[![AILuminate DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18370263.svg)](https://doi.org/10.5281/zenodo.18370263)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18013104.svg)](https://doi.org/10.5281/zenodo.18013104)
 [![Governance DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18009153.svg)](https://doi.org/10.5281/zenodo.18009153)
 [![SB 243 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18027446.svg)](https://doi.org/10.5281/zenodo.18027446)
-[![XSTest DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18368390.svg)](https://doi.org/10.5281/zenodo.18368390)
+[![XSTest DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18370603.svg)](https://doi.org/10.5281/zenodo.18370603)
 [![Attacks](https://img.shields.io/badge/attacks-2%2C550-blue)](https://github.com/TelosSteward/TELOS-Validation)
 [![ASR](https://img.shields.io/badge/attack%20success%20rate-0%25-brightgreen)](https://github.com/TelosSteward/TELOS-Validation)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
@@ -17,8 +18,37 @@ Official validation data for TELOS AI governance framework.
 
 - **Total Attacks**: 2,550
 - **Attack Success Rate**: 0.00%
-- **Statistical Confidence**: 99.9% CI [0%, 0.18%]
+- **Statistical Confidence**: 99.9% CI [0%, 0.14%]
 - **Autonomous Blocking**: 100% (Tier 1 + Tier 2)
+- **Forensic Audit Trails**: Full JSONL traces for every governance decision
+
+---
+
+## Runtime Auditable Governance
+
+All validation datasets include complete forensic audit trails. Each governance decision is recorded at runtime with:
+
+| Event Type | Contents |
+|------------|----------|
+| `session_start` | Session ID, timestamp, PA configuration |
+| `pa_established` | Full PA vector, thresholds, domain |
+| `turn_start` | User input, turn number |
+| `fidelity_calculated` | Raw similarity, normalized fidelity |
+| `intervention_triggered` | Tier, action, rationale |
+| `turn_complete` | Outcome, response metadata |
+| `session_end` | Summary statistics |
+
+**Total Events Recorded:** 11,208 governance events across 2,550 attacks
+
+| Dataset | Events | Trace Size |
+|---------|--------|------------|
+| AILuminate | 4,803 | 1.69 MB |
+| HarmBench | 1,601 | 0.56 MB |
+| MedSafetyBench | 3,602 | 1.26 MB |
+| SB 243 | 201 | 0.07 MB |
+| XSTest | 1,001 | 0.35 MB |
+
+**Regulatory Alignment:** EU AI Act Articles 12 & 72, California SB 53, HIPAA Security Rule, ISO 27001
 
 ---
 
@@ -92,7 +122,7 @@ Official validation data for TELOS AI governance framework.
 | **Governance Benchmark** | [10.5281/zenodo.18009153](https://doi.org/10.5281/zenodo.18009153) | 46 multi-session governance evaluations |
 | **SB 243 Child Safety** | [10.5281/zenodo.18027446](https://doi.org/10.5281/zenodo.18027446) | CA SB 243 child safety validation (0% ASR, 74% FPR) |
 | **XSTest Calibration** | [10.5281/zenodo.18368390](https://doi.org/10.5281/zenodo.18368390) | Over-refusal calibration (24.8% → 8.0% with domain PA) |
-| **AILuminate** | *Pending* | MLCommons AILuminate validation (1,200 prompts, 0% ASR) |
+| **AILuminate** | [10.5281/zenodo.18370263](https://doi.org/10.5281/zenodo.18370263) | MLCommons AILuminate validation (1,200 prompts, 0% ASR) |
 
 ---
 
@@ -164,7 +194,7 @@ For the XSTest over-refusal calibration:
 }
 ```
 
-For the AILuminate validation (pending Zenodo upload):
+For the AILuminate validation:
 
 ```bibtex
 @dataset{brunner_2026_telos_ailuminate,
@@ -174,7 +204,8 @@ For the AILuminate validation (pending Zenodo upload):
   year         = 2026,
   publisher    = {Zenodo},
   version      = {1.0},
-  note         = {DOI pending}
+  doi          = {10.5281/zenodo.18370263},
+  url          = {https://doi.org/10.5281/zenodo.18370263}
 }
 ```
 
